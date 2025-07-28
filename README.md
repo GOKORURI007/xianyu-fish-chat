@@ -6,28 +6,7 @@
 
 ## 安装说明
 
-### Windows
-
-下载安装后使用即可
-
-### Linux & MacOS
-
-> 要有 rust 和 nodejs 环境
-
-1. 克隆仓库
-
-```shell
-git clone https://github.com/GOKORURI007/xianyu-fish-chat.git --depth 1
-```
-
-2. 进入仓库目录
-
-```shell
-cd xianyu-fish-chat
-npm tauri build
-```
-
-3. 从 `src-tauri/target/release` 中获取构建好的软件包
+[下载](https://github.com/GOKORURI007/xianyu-fish-chat/releases)安装后使用即可
 
 ## 使用说明
 
