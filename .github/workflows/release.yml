@@ -6,7 +6,7 @@ on:
       - release
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: ${{github.workflow}}-${{github.ref}}
   cancel-in-progress: true
 
 jobs:
@@ -16,7 +16,7 @@ jobs:
       matrix:
         platform: [macos-latest, ubuntu-latest, windows-latest]
 
-    runs-on: ${{ matrix.platform }}
+    runs-on: ${{matrix.platform}}
     steps:
       - uses: actions/checkout@v2
 
