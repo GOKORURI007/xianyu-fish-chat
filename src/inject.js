@@ -1,5 +1,4 @@
 const {invoke} = window.__TAURI__.core;
-const {shortcut} = window.__TAURI_PLUGIN_GLOBAL_SHORTCUT__
 
 const notify = async (title, body) => {
   await invoke('send_notification', {
@@ -25,7 +24,7 @@ let convList = document.querySelector("#conv-list-scrollable");
 let msgList = document.querySelector("#msg-list-container");
 
 // 2. 定义回调函数，接收 mutation 记录列表
-const callback_conv = (mutationsList, observer) => {
+const callback_conv = (mutationsList, _observer) => {
   if (document.hasFocus()) return;
   for (const mutation of mutationsList) {
     // 只关注子节点列表的变动
@@ -45,7 +44,7 @@ const callback_conv = (mutationsList, observer) => {
   }
 };
 
-const callback_msg = (mutationsList, observer) => {
+const callback_msg = (mutationsList, _observer) => {
   if (document.hasFocus()) return;
   for (const mutation of mutationsList) {
     // 只关注子节点列表的变动
