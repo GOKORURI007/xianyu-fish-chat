@@ -39,8 +39,8 @@ jobs:
           node-version: 20
       - name: Install PNPM
         run: npm install -g pnpm
-      - name: Install & Build
-        run: pnpm i && pnpm build
+      - name: Install
+        run: pnpm i
 
       - name: install Rust stable
         uses: dtolnay/rust-toolchain@stable # Set this to dtolnay/rust-toolchain@nightly
