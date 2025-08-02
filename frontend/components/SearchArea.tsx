@@ -13,9 +13,9 @@ export function SearchArea({ showButton = false }: SearchAreaProps) {
     <Flex
       className={cn("bg-gray-800/50")}
       gap={"2"}
-      align={"end"}
+      align={"center"}
       justify={"center"}
-      pb={"2"}
+      // pb={"2"}
       px={"2"}
     >
       {/* 搜索输入框 */}

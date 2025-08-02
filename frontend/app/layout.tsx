@@ -6,6 +6,7 @@ import { Flex, Grid, Theme } from "@radix-ui/themes";
 import { Sidebar } from "@/components/Sidebar";
 import { ThemeProvider } from "next-themes";
 import NoSSR from "@/components/NoSSR";
+import { Titlebar } from "@/components/Titlebar";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,14 +19,19 @@ export default function RootLayout({children,}: Readonly<{
   return (
     <html lang="en">
     <body>
+    <NoSSR>
       <ThemeProvider attribute={"class"}>
         <Theme appearance="dark" panelBackground="translucent">
           <Flex>
             <Sidebar/>
+            <Grid width={"100%"} height={"100vh"} rows={"1.5rem 1fr"}>
+            <Titlebar/>
             {children}
+            </Grid>
           </Flex>
         </Theme>
       </ThemeProvider>
+    </NoSSR>
     </body>
     </html>
   );

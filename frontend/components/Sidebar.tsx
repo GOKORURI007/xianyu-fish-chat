@@ -42,7 +42,7 @@ export function Sidebar() {
               className={cn("not-hover:!bg-transparent")}
             >
               <btn.icon
-                color={"var(--grass-10)"}
+                color={"var(--grass-9)"}
                 className={cn("size-6")}
               />
             </IconButton>
@@ -64,7 +64,7 @@ export function Sidebar() {
               className={cn("not-hover:!bg-transparent")}
             >
               <btn.icon
-                color={"var(--grass-10)"}
+                color={"var(--grass-9)"}
                 className={cn("size-6")}
               />
             </IconButton>
