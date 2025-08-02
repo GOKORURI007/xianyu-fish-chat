@@ -27,7 +27,7 @@ export function Titlebar({leftArea}: { leftArea?: ReactNode }) {
   return (
     <Grid columns={"14rem 1fr"} gap={"2"} className={cn()}>
       {/* 左侧区域：显示自定义内容或占位容器 */}
-      {leftArea ? leftArea : <Container/>}
+      {leftArea ? leftArea : <div></div>}
 
       {/* 右侧操作按钮区域 */}
       <Flex direction={"row-reverse"} className={cn("border-amber-600")}>

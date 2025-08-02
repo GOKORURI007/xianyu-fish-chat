@@ -7,6 +7,7 @@ import { Sidebar } from "@/components/Sidebar";
 import { ThemeProvider } from "next-themes";
 import NoSSR from "@/components/NoSSR";
 import { Titlebar } from "@/components/Titlebar";
+import { cn } from "@/utils/cn";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,17 +19,16 @@ export default function RootLayout({children,}: Readonly<{
 }>) {
   return (
     <html lang="en">
-    <body>
+    <body className={"h-screen min-h-screen max-h-screen"}>
     <NoSSR>
       <ThemeProvider attribute={"class"}>
         <Theme appearance="dark" panelBackground="translucent">
-          <Flex>
-            <Sidebar/>
-            <Grid width={"100%"} height={"100vh"} rows={"1.5rem 1fr"}>
+          <Grid width={"100%"} height={"100vh"} rows={"1.5rem minmax(0, 1fr)"} columns={"4rem 1fr"}>
+            <div></div>
             <Titlebar/>
+            <Sidebar/>
             {children}
-            </Grid>
-          </Flex>
+          </Grid>
         </Theme>
       </ThemeProvider>
     </NoSSR>

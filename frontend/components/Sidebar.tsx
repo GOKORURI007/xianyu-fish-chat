@@ -19,17 +19,18 @@ const bottomItems = [
   }
 ]
 
-export function Sidebar() {
+export function Sidebar({className}: { className?: string }) {
   return (
     <Flex
-      width={"4rem"}
+      // height={"100vh"}
       direction={"column"}
       gapY={"2"}
       align={"center"}
-      py={"5"}
+      pb={"4"}
+      className={className ?? ""}
     >
       {/* 用户头像区域 */}
-      <Avatar fallback={"A"} size={"3"}> </Avatar>
+      <Avatar fallback={"A"} className={cn("!w-11 !h-11")}> </Avatar>
 
       {/* 顶部按钮组 */}
       <Flex direction={"column"} mt={"4"} gapY={"2"}>
