@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta, StoryFn } from "@storybook/nextjs-vite";
-import { AbsoluteCenter } from "@/components/layout/AbsoluteCenter";
+import { AbsoluteCenter } from "./absolute-center";
 
 // 定义组件的元数据
 export default {
