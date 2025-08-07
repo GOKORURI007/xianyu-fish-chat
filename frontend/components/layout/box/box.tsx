@@ -82,5 +82,5 @@ export function Box(
 }
 
 export interface BoxProps extends React.HTMLAttributes<HTMLDivElement> {
-  as: "div" | "span" | "section" | "header" | "footer" | "aside";
+  as?: "div" | "span" | "section" | "header" | "footer" | "aside";
 }

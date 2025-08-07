@@ -48,7 +48,7 @@ WithNestedContent.args = {
     <>
       <h3 className="text-lg font-bold mb-2"> 嵌套内容示例 </h3>
       <p className="mb-2">Box 组件可以包含任何内容，包括其他 React 组件。</p>
-      <Box as="div" className="p-2 bg-muted text-muted-foreground border border-chart-2">
+      <Box as="div" className="p-2 border border-chart-2">
         这是一个嵌套的 Box
       </Box>
     </>
