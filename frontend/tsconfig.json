@@ -24,7 +24,8 @@
     },
     "include": [
         "next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts",
-        ".storybook/**/*.tsx", "tailwind.config.ts", "components/**/*.{ts,tsx}"
+        ".storybook/**/*.tsx", "tailwind.config.ts", "components/**/*.{ts,tsx}",
+        ".storybook/DocumentationTemplate.mdx"
     ],
     "exclude": ["node_modules"]
 }

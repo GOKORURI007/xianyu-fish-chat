@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Prompts: chakra 转 tailwind
 
-## Getting Started
+把下面的 component 改成 tailwindcss 形式，参考 @aspect-ratio.tsx
 
-First, run the development server:
+```chakra component
+"use client"
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+import {type HTMLChakraProps, chakra} from "../../styled-system"
+
+export interface CenterProps extends HTMLChakraProps<"div"> {}
+
+/**
+ * React component used to horizontally and vertically center its child.
+ * It uses the popular `display: flex` centering technique.
+ *
+ * @see Docs https://chakra-ui.com/docs/components/center
+ */
+export const Center = chakra("div", {
+  base: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  variants: {
+    inline: {
+      true: {
+        display: "inline-flex",
+      },
+    },
+  },
+})
+
+Center.displayName = "Center"
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+同样参考 @aspect-ratio.stories.tsx 在同一文件夹下生成 stories 文件，并在同一文件夹下用
+index.ts 导出 component
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+从这个 chakra component 生成基于 tailwindcss 的 react component，使用 function 模式，在
+index.ts 中导出, 命名为 ***，放在 ***。
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Prompts 创建 Stories
 
-## Learn More
+参考 @aspect-ratio.stories.tsx，写一个 @... 的 stories，在同一文件夹下生成 stories
+文件，并在同一文件夹下用 index.ts 导出 component。
 
-To learn more about Next.js, take a look at the following resources:
+### Prompts 补充注释
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+参考 @aspect-ratio.tsx 补充 @... 的组件注释。

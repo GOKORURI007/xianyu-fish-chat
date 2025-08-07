@@ -1,6 +1,6 @@
 'use client'
 
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { RadioGroup, RadioGroupItem } from "@/components/shadcn-ui/radio-group";
 import { MessageCircle, Store, SunMoon } from "lucide-react"
 import { useId } from "react";
 import { cn } from "@/lib/utils";

@@ -46,8 +46,6 @@ import { cn } from "@/lib/utils";
  *   <video src="/demo.mp4" autoPlay muted loop />
  * </AspectRatio>
  * ```
- *
- * ## 📐 功能测试
  */
 export function AspectRatio(
   {ratio = 4 / 3, children, className, ...rest}: AspectRatioProps

@@ -33,6 +33,7 @@
     "@storybook/nextjs-vite": "^9.1.1",
     "@storybook/test": "^8.6.14",
     "@tailwindcss/postcss": "^4",
+    "@types/mdx": "^2.0.13",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
@@ -46,6 +47,7 @@
     "tailwindcss": "^4",
     "tw-animate-css": "^1.3.6",
     "typescript": "^5",
+    "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.2.4"
   }
 }

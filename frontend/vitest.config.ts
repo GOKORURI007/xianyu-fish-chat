@@ -13,7 +13,7 @@ export default defineConfig({
   test: {
     coverage: {
       include: ["components/**", "lib/**", "app/**"],
-      exclude: ["components/ui/**"],
+      exclude: ["components/shadcn-ui/*.tsx", "**/index.ts"],
     },
     projects: [
       {

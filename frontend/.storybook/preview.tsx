@@ -1,8 +1,8 @@
 import type { Preview } from "@storybook/nextjs-vite";
 import "../app/globals.css";
-import { ThemeProvider, ThemeToggle } from "../components/index";
+import { ThemeProvider, ThemeToggle } from "@/components/theme";
 import { themes } from "storybook/theming";
-
+import DocumentationTemplate from "./DocumentationTemplate.mdx"
 
 const DesktopViewports = {
   PC: {
@@ -32,6 +32,7 @@ const preview: Preview = {
 
     docs: {
       theme: themes.dark, // The replacement theme to use
+      page: DocumentationTemplate,
     },
   },
 
@@ -48,7 +49,7 @@ const preview: Preview = {
           {!context.parameters?.__removeThemeToggle && (
             <ThemeToggle className="absolute top-3 right-3"/>
           )}
-          <div style={{padding: "3em"}}>
+          <div style={{padding: "3.5rem"}}>
             <Story/>
           </div>
         </ThemeProvider>

@@ -4,7 +4,7 @@ import * as React from "react";
 import { Moon, Sun, MonitorCog } from "lucide-react";
 import { useTheme } from "next-themes";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/shadcn-ui/button";
 import { cn } from "@/lib/utils";
 
 

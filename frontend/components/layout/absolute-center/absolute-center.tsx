@@ -43,12 +43,13 @@ import { cn } from "@/lib/utils";
  *   </AbsoluteCenter>
  * </div>
  * ```
- *
- * ## 📐 功能测试
  */
 export function AbsoluteCenter(
-  {axis = "both", className = "", children, ...rest}:
-  AbsoluteCenterProps) {
+  {axis = "both", className = "", children, ...rest}
+  : {
+    axis?: "horizontal" | "vertical" | "both";
+  } & React.HTMLAttributes<HTMLDivElement>
+) {
   // axis -> Tailwind 类名映射，支持 LTR/RTL
   const axisClasses = {
     horizontal:
@@ -69,8 +70,4 @@ export function AbsoluteCenter(
       {children}
     </div>
   );
-}
-
-interface AbsoluteCenterProps extends React.HTMLAttributes<HTMLDivElement> {
-  axis?: "horizontal" | "vertical" | "both";
 }
