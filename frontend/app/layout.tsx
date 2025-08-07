@@ -1,10 +1,11 @@
 "use client"
 
 import "./globals.css";
-import { ThemeProvider } from "@/components/sidebar";
+
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
-import { Skeleton } from "@/components/ui/skeleton";
+import { Skeleton } from "@/components/shadcn-ui/skeleton";
+import { ThemeProvider } from "@/components/theme";
 
 export default function RootLayout(
   {children}:

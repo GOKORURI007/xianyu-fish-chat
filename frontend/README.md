@@ -1,14 +1,15 @@
 ## Prompts: chakra 转 tailwind
 
-把下面的 component 改成 tailwindcss 形式，参考 @aspect-ratio.tsx
+把下面的 component 改成 tailwindcss 形式，参考 @flex.tsx
 
-```chakra component
+```typescript
 
 ```
 
-同样参考 @aspect-ratio.stories.tsx 在同一文件夹下生成 stories 文件，不要设置任何背景色和前景色，只能用 border-chart-[1-5] 调整 border 颜色并用border设置border宽度，并在同一文件夹下用index.ts 导出 component
+同样参考 @flex.stories.tsx 在同一文件夹下生成 stories 文件，不要设置任何背景色和前景色，只能用 border-chart-[1-5] 调整 border 
+颜色并用border设置border宽度，并在同一文件夹下用index.ts 导出 component
 
-从这个 chakra component 生成基于 tailwindcss 的 react component，使用 function 模式，在index.ts 中导出, 命名为 ***，放在 *** 中。
+从这个 chakra component 生成基于 tailwindcss 的 react component，使用 function 模式，在index.ts 中导出, 命名为 anchor.tsx，放在 layout/anchor 中。
 
 ### Prompts 创建 Stories
 
