@@ -1,11 +1,13 @@
-"use client"
+"use client";
 
 import "./globals.css";
 
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
-import { Skeleton } from "@/components/shadcn-ui/skeleton";
 import { ThemeProvider } from "@/components/theme";
+import { Grid } from "@/components/layout/grid";
+import { Sidebar } from "@/components/sidebar";
+import { TitleBar } from "@/components/titlebar";
 
 export default function RootLayout(
   {children}:
@@ -19,13 +21,17 @@ export default function RootLayout(
       enableSystem
       disableTransitionOnChange
     >
-      <div className={cn('grid', 'grid-cols-[3.75rem_1fr]', 'grid-rows-[1.75rem_1fr]', "h-screen",'gap-2','place-content-center')}>
-        <Skeleton className="w-full h-full" />
-        <Skeleton className="w-full h-full" />
-        <Skeleton className="w-full h-full" />
+      <Grid
+        templateColumns={"3.75rem 1fr"}
+        templateRows={"1.75rem 1fr"}
+        className={cn("h-screen", "gap-2", "place-content-center")}
+      >
+        <TitleBar className="w-full h-full col-span-2 bg-transparent"/>
+        <Sidebar className={"bg-background/40"}/>
+        {/*<Skeleton className="w-full h-full"/>*/}
         {/*<Skeleton className="w-full h-full" />*/}
         {children}
-      </div>
+      </Grid>
     </ThemeProvider>
     </body>
     </html>

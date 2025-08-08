@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/nextjs-vite';
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { Sidebar } from "./sidebar";
 
 const meta: Meta<typeof Sidebar> = {
@@ -9,7 +9,7 @@ const meta: Meta<typeof Sidebar> = {
   },
   decorators: [
     (Story) => (
-      <div className={"h-screen w-16 border-amber-600 border-1"}>
+      <div className={"h-[50vh] w-16 border-amber-600 border-1"}>
         <Story/>
       </div>
     )
